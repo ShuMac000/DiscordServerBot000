@@ -1,7 +1,7 @@
 import { ApplicationCommandInteraction, InteractionResponse } from "../../@types/index.d.ts"
 import { InteractionCallbackType } from "../../@types/types.ts"
 
-export function ping(interaction:ApplicationCommandInteraction):InteractionResponse {
+export function omikugi(interaction:ApplicationCommandInteraction):InteractionResponse {
   // コマンドの情報を取得
   const data = interaction.data
   // コマンドの送信者の情報を取得
@@ -13,7 +13,7 @@ export function ping(interaction:ApplicationCommandInteraction):InteractionRespo
       // input at the top.
       type: InteractionCallbackType.CHANNEL_MESSAGE_WITH_SOURCE,
       data: {
-        content: `pong!`,
+        content: `大吉やデェ!`,
       }
     }
   return res;
