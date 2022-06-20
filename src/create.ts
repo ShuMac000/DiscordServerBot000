@@ -10,13 +10,19 @@ const headers = {
     Authorization: `Bot ${BOT_TOKEN}`
 }
 
-const body:GlobalApplicationCommand = {
+const ping:GlobalApplicationCommand = {
     name: "ping",
     description: "Response pong!",
 }
 
+const omikugi:GlobalApplicationCommand = {
+    name: "omikugi",
+    description: "Response omikugi",
+}
+
 try {
-    await KY.post(url, {headers:headers, json: body }).json()
+    await KY.post(url, {headers:headers, json: ping  }).json()
+    await KY.post(url, {headers:headers, json: omikugi  }).json()
 } catch (e) {
     console.log("error");
     console.error(e)

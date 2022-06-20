@@ -2,6 +2,7 @@ import { ApplicationCommandInteraction, InteractionResponse } from "../../@types
 import { InteractionCallbackType } from "../../@types/types.ts"
 import { ping } from "./ping.ts"
 import { omikugi } from "./omikugi.ts"
+
 export function onApplicationCommand(interaction:ApplicationCommandInteraction){
   const data = interaction.data
   // 実行されたコマンド名
